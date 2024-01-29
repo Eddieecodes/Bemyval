@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Bemyval</title>
 </head>
 <body>
@@ -11,10 +12,48 @@
     <h1>Will you be my Valentine? 
     </h1>
     <div id="div2">
-        <button type="button" id="yesbtn"><a href="">YES</a></button>
-        <button type="button" id="nobtn"><a href="">NO</a>
+        <form>
+            <label for="friendEmail">Your Email:</label>
+            <input type="email" id="friendEmail" required>
+            <br>
+            <br>
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" required>
+            <br>
+            <br>
+        <button type="button" id="yesbtn" onclick="sendRequest('YES')">YES</button>
+        <button type="button" id="nobtn" onclick="sendRequest('NO')"> NO
         </button>
+    </form>
     </div>
 </div>
 </body>
+
+<script>
+    function sendRequest(answer) {
+      var friendEmail = document.getElementById('friendEmail').value;
+      var yourName = document.getElementById('yourName').value;
+  
+      // Send data to the serverless function using a fetch API (AJAX)
+      fetch('/.netlify/functions/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ friendEmail, yourName, answer }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          alert(`Request sent to ${friendEmail} from ${yourName} with answer: ${answer}!`);
+        } else {
+          alert('Failed to send request. Please try again.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      });
+    }
+  </script>
 </html>

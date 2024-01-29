@@ -22,12 +22,13 @@ h1{
     
     height: 35px;
     justify-content: center;
-    gap: 50px;
+    
 }
 button{
     border-radius: 5px;
     width: 70px;
     font-weight: bold;
+    height: 30px;
 }
 #yesbtn:hover{
     background-color: red;
@@ -41,4 +42,12 @@ button{
 }
 a{
     text-decoration: none;
+}
+label{
+    color: white;
+    font-weight: bold;
+}
+input{
+    border: 2px solid red;
+    border-radius: 3px;
 }
