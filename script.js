@@ -1,6 +1,6 @@
 // functions/sendEmail.js
 
-exports.handler = async function (event, context) {
+export async function handler (event, context) {
     try {
       // Parse the form data
       const data = JSON.parse(event.body);
@@ -30,4 +30,4 @@ exports.handler = async function (event, context) {
         body: JSON.stringify({ success: false, error: 'Internal Server Error' }),
       };
     }
-  };
+  }

@@ -35,7 +35,7 @@
       var yourName = document.getElementById('yourName').value;
   
       // Send data to the serverless function using a fetch API (AJAX)
-      fetch('/.functions/sendRequest', {
+      fetch('/.netlify/functions/sendRequest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
