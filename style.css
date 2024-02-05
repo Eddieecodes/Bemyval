@@ -59,7 +59,7 @@ input{
     background-color: bisque;
     border-image-source: url(images/teddy.png);
 border-image-width: 15px;
-
+background-color: rgb(192, 132, 59);
     width: 155px;
     height: 65px;
     rotate: -5deg;
@@ -85,12 +85,14 @@ border-image-width: 15px;
       z-index: 1;
 }
 .two{
-
+background-color: rgb(175, 107, 166);
 rotate: -5deg;
 }
 .one{
     rotate: 5deg;
+    background-color: brown;
 }
 .three{
     rotate: 5deg;
+    background-color: burlywood;
 }
