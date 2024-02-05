@@ -1,12 +1,16 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color:bisque;
     background-image: url(images/love.gif);
     background-size: 150px;
 }
 h1{
-    color: white;
+    color:black;
+    text-align: center;
+}
+p{
+    font-weight: bold;
     text-align: center;
 }
 .div1{
@@ -19,7 +23,7 @@ h1{
 }
 #div2{
     display: flex;
-    
+    gap: 20px;
     height: 35px;
     justify-content: center;
     
@@ -50,4 +54,34 @@ label{
 input{
     border: 2px solid red;
     border-radius: 3px;
+}
+.first-tag{
+    border-radius: 5px;
+    background-color: bisque;
+    border-image-source: url(images/love.gif);
+    border-image-width: 10px;
+    width: 155px;
+    height: 65px;
+    rotate: -2deg;
+    animation: testing 3s infinite;
+  animation-direction: alternate;
+    
+}
+@keyframes testing{
+    0% {
+        transform: translate(0, 0);    
+      }
+      100% {
+        transform: translate(20px, 500px);
+      }
+}
+#whole-div{
+    column-gap: 140px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.two{
+background-color: orange;
+
 }
