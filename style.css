@@ -58,11 +58,15 @@ input{
 .first-tag{
     border-radius: 5px;
     background-color: bisque;
-    border-image-source: url(images/love.gif);
-    border-image-width: 10px;
+    border-image-source: url(images/teddy.png);
+    border-image-slice: 20;
+    border-image-width: 20;
+    border-image-outset: 1;
+    border-image-repeat: round;
+    
     width: 155px;
     height: 65px;
-    rotate: -2deg;
+    rotate: -5deg;
     animation: testing 3s infinite;
   animation-direction: alternate;
     
@@ -77,11 +81,18 @@ input{
 }
 #whole-div{
     column-gap: 140px;
+    row-gap: 20px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 .two{
-background-color: orange;
-
+border-image-source: url(images/teddy.png);
+rotate: -5deg;
+}
+.one{
+    rotate: 5deg;
+}
+.three{
+    rotate: 5deg;
 }
