@@ -14,9 +14,6 @@ p{
     text-align: center;
 }
 .div1{
-    
-    
-    
     margin-left: auto;
     margin-right: auto;
     margin-top: 45px;
@@ -59,11 +56,8 @@ input{
     border-radius: 5px;
     background-color: bisque;
     border-image-source: url(images/teddy.png);
-    border-image-slice: 20;
-    border-image-width: 20;
-    border-image-outset: 1;
-    border-image-repeat: round;
-    
+border-image-width: 15px;
+
     width: 155px;
     height: 65px;
     rotate: -5deg;
