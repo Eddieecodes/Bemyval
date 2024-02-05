@@ -19,7 +19,7 @@ p{
     
     margin-left: auto;
     margin-right: auto;
-    margin-top: 230px;
+    margin-top: 45px;
 }
 #div2{
     display: flex;
@@ -95,10 +95,4 @@ rotate: -5deg;
 }
 .three{
     rotate: 5deg;
-}
-@media only screen and (max-width: 767px) {
-    .div1{
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
